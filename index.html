@@ -211,7 +211,7 @@
         <canvas id="startBackgroundCanvas"></canvas>
         <div id="startScreen" class="screen">
             <div class="rules">
-                <h1>Slow Down</h1>
+                <h1>Slow Down 2</h1>
                 <p>You're a yellow circle orbiting a ring. Hold on screen or space bar to slow down. Double tap (or double space) to switch direction.</p>
 
                 <div class="object-list">
@@ -236,18 +236,18 @@
                         <span>Shield protects from Enemies</span>
                     </div>
                 </div>
-                <button onclick="startGame()">Start Game</button>
+                <button id="startButton" onclick="startGame()" ontouchstart="startGame()">Start Game</button>
             </div>
         </div>
 
         <div id="gameScreen" class="screen hidden">
             <canvas id="gameCanvas"></canvas>
             <div id="shieldBar"></div>
-            <button id="pauseButton">Pause</button>
+            <button id="pauseButton" onclick="togglePause()" ontouchstart="togglePause()">Pause</button>
             <div id="score">Score: 0</div>
             <div id="lives">Lives: 2</div>
             <div id="multiplier">x1</div>
-            <button id="homeButton">Home</button>
+            <button id="homeButton" onclick="goToStartScreen()" ontouchstart="goToStartScreen()">Home</button>
         </div>
 
         <div id="gameOverScreen" class="screen hidden">
@@ -258,8 +258,8 @@
                     <div>High Score: <span id="highScore">0</span></div>
                 </div>
                 <div class="button-group">
-                    <button onclick="startGame()">Play</button>
-                    <button onclick="goToStartScreen()">Home</button>
+                    <button id="tryAgainButton" onclick="startGame()" ontouchstart="startGame()">TRY AGAIN</button>
+                    <button id="gameOverHomeButton" onclick="goToStartScreen()" ontouchstart="goToStartScreen()">Home</button>
                 </div>
             </div>
         </div>
@@ -327,9 +327,34 @@
             window.addEventListener('touchend', handleTouchEnd);
             document.getElementById('highScore').textContent = highScore;
             
-            // Add pause button event listener
-            document.getElementById('pauseButton').addEventListener('click', togglePause);
-            document.getElementById('homeButton').addEventListener('click', goToStartScreen);
+            // Add touch event listeners for all buttons
+            const pauseButton = document.getElementById('pauseButton');
+            pauseButton.addEventListener('click', togglePause);
+            pauseButton.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                togglePause();
+            });
+
+            const homeButton = document.getElementById('homeButton');
+            homeButton.addEventListener('click', goToStartScreen);
+            homeButton.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                goToStartScreen();
+            });
+
+            const tryAgainButton = document.getElementById('tryAgainButton');
+            tryAgainButton.addEventListener('click', startGame);
+            tryAgainButton.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                startGame();
+            });
+
+            const gameOverHomeButton = document.getElementById('gameOverHomeButton');
+            gameOverHomeButton.addEventListener('click', goToStartScreen);
+            gameOverHomeButton.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                goToStartScreen();
+            });
             
             // Start background animation
             animateStartBackground();
