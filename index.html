@@ -8,6 +8,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        /* Add these styles to prevent text selection */
+        * {
+            -webkit-user-select: none;  /* Safari */
+            -ms-user-select: none;      /* IE 10 and IE 11 */
+            user-select: none;          /* Standard syntax */
+            -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+        }
+
+        /* If you need to enable text selection in specific areas (like input fields), add this */
+        .selectable {
+            -webkit-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -211,7 +226,7 @@
         <canvas id="startBackgroundCanvas"></canvas>
         <div id="startScreen" class="screen">
             <div class="rules">
-                <h1>Slow Down 2</h1>
+                <h1>Slow Down 3</h1>
                 <p>You're a yellow circle orbiting a ring. Hold on screen or space bar to slow down. Double tap (or double space) to switch direction.</p>
 
                 <div class="object-list">
