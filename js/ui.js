@@ -39,5 +39,11 @@ function shareOnTwitter() {
     const text = `Diggle shmiggle, I've scored ${highScore} in Slow Down`;
     const url = 'https://slowdown.diggle.fun/';
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
-    window.open(twitterUrl, '_blank');
+    const win = window.open();
+    win.location.href = twitterUrl; 
 }
+
+function openMoreGames() {
+    const win = window.open();
+    win.location.href = 'https://www.diggle.fun/';
+  }

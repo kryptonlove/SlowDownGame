@@ -224,6 +224,8 @@ button:hover {
     cursor: pointer;
     transition: transform 0.2s;
     display: none;
+    z-index: 9999;
+    pointer-events: auto;
 }
 
 #homeButton:hover {
@@ -246,6 +248,8 @@ button:hover {
     cursor: pointer;
     transition: transform 0.2s;
     display: none;
+    z-index: 9999;
+    pointer-events: auto;
 }
 
 #resumeButton:hover {

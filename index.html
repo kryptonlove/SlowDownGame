@@ -33,7 +33,7 @@
                 <button class="start-button" onclick="startGame()">Play</button>
                 <button class="start-button" onclick="startTutorial()">How to play</button>
                 <button class="start-button" onclick="shareOnTwitter()">Share on X</button>
-                <button class="start-button" onclick="window.open('https://www.diggle.fun/', '_blank')">More games</button>
+                <button class="start-button" onclick="openMoreGames()">More games</button>
                 <button class="start-button music-button" onclick="toggleMusic()">Music OFF</button>
             </div>
         </div>
@@ -46,13 +46,10 @@
 
             <div id="score" class="score-number">0</div>
             <div id="multiplier" class="score-multiplier">×1</div>
-            
-            <!-- <div id="score">Score: 0</div> -->
             <div id="lives">Lives: 2</div>
 
-            <!-- <div id="multiplier">x1</div> -->
             <button id="resumeButton">Resume</button>
-            <button id="homeButton" onclick="goToStartScreen()" ontouchstart="goToStartScreen()">Home</button>
+            <button id="homeButton" onclick="goToStartScreen()">Home</button>
             <div id="tutorialCenterText" class="tutorial-center-text"></div>
             <div id="tutorialTextBox" class="tutorial-text-box"></div>
         </div>
@@ -65,7 +62,7 @@
                     <div>High Score: <span id="highScore">0</span></div>
                 </div>
                 <div class="button-group">
-                    <button id="tryAgainButton" onclick="startGame()" ontouchstart="startGame()">TRY AGAIN</button>
+                    <button id="tryAgainButton" onclick="startGame()">TRY AGAIN</button>
                     <button id="resumeButton" class="resume-button">Resume</button>
                     <button id="gameOverHomeButton" onclick="goToStartScreen()" ontouchstart="goToStartScreen()">Home</button>
                 </div>
