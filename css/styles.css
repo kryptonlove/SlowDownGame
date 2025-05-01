@@ -340,21 +340,16 @@ button:hover {
 }
 
 a.start-button {
-    text-decoration: none;
     display: block;
-    background-color: #FFA900;
     border: none;
     color: #000000;
-    padding: 15px 30px;
-    font-size: 18px;
+    padding: 8px 0;
+    font-size: 16px;
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 400;
     text-transform: uppercase;
-    border-radius: 25px;
     cursor: pointer;
-    margin-top: 20px;
     transition: transform 0.2s;
-    width: 100%;
     box-sizing: border-box;
 }
 
