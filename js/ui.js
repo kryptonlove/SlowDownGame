@@ -36,14 +36,21 @@ function updateFreezeBar() {
 
 // Share result on Twitter
 function shareOnTwitter() {
-    const text = `Diggle shmiggle, I've scored ${highScore} in Slow Down`;
+    const text = `Diggle Shmiggle! I scored ${highScore} in Slow Down. Play to slow down, bruv`;
     const url = 'https://slowdown.diggle.fun/';
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
-    const win = window.open();
-    win.location.href = twitterUrl; 
-}
-
-function openMoreGames() {
-    const win = window.open();
-    win.location.href = 'https://www.diggle.fun/';
+  
+    const a = document.createElement('a');
+    a.href = twitterUrl;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.click();
+  }
+  
+  function openMoreGames() {
+    const a = document.createElement('a');
+    a.href = 'https://www.diggle.fun/';
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.click();
   }
