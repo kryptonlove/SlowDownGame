@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slow Down</title>
-    
+
     <meta property="og:title" content="Slow Down — Relaxing Arcade Game" />
     <meta property="og:description" content="Touch the screen to slow down. Catch stars, avoid enemies, earn points." />
     <meta property="og:image" content="https://slowdown.diggle.fun/assets/preview.png" />
@@ -21,7 +21,6 @@
         <canvas id="startBackgroundCanvas"></canvas>
         <!-- Start Screen -->
         <div id="startScreen" class="screen">
-            <canvas id="startBackgroundCanvas"></canvas>
             <img src="assets/diggle-2100.png" class="artwork" alt="Game artwork">
             <audio id="backgroundMusic" loop>
                 <source src="assets/slowdown.mp3" type="audio/mpeg">
@@ -31,11 +30,11 @@
                 <div class="highscore-value" id="startScreenHighScore">0</div>
             </div>
             <div class="button-container">
-                <button class="start-button" onclick="startGame()" ontouchstart="this.click()">Play</button>
-                <button class="start-button" onclick="startTutorial()" ontouchstart="this.click()">How to play</button>
-                <button class="start-button" onclick="shareOnTwitter()" ontouchstart="this.click()">Share on X</button>
-                <button class="start-button" onclick="window.open('https://www.diggle.fun/', '_blank')" ontouchstart="this.click()">More games</button>
-                <button class="start-button music-button" onclick="toggleMusic()" ontouchstart="this.click()">Music OFF</button>
+                <button class="start-button" onclick="startGame()">Play</button>
+                <button class="start-button" onclick="startTutorial()">How to play</button>
+                <button class="start-button" onclick="shareOnTwitter()">Share on X</button>
+                <button class="start-button" onclick="window.open('https://www.diggle.fun/', '_blank')">More games</button>
+                <button class="start-button music-button" onclick="toggleMusic()">Music OFF</button>
             </div>
         </div>
         <!-- Game Screen -->

@@ -24,6 +24,13 @@ body {
     color: #FFFFFF;
 }
 
+html, body {
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+  }
+
 #gameContainer {
     position: relative;
     width: 100%;
