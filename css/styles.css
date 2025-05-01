@@ -316,41 +316,32 @@ button:hover {
 
 .button-container {
     position: absolute;
-    bottom: 32px;
+    bottom: 60px;
     left: 50%;
-    text-align: left;
-    transform: translateX(0);
+    /* text-align: left; */
+    /* transform: translateX(0); */
     z-index: 2;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
-    pointer-events: auto; /* Ensure buttons can receive clicks/touches */
+    pointer-events: auto; 
 }
 
-.start-button {
-    background: none;
-    border: none;
-    color: #000000;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 8px 0;
-    text-align: left;
-    transition: transform 0.2s;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-}
-
+button.start-button,
 a.start-button {
-    display: block;
-    border: none;
-    color: #000000;
-    padding: 8px 0;
-    font-size: 16px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 400;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: transform 0.2s;
-    box-sizing: border-box;
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 16px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 44px;
+  transition: transform 0.2s;
+  text-align: left;
+  padding: 0;
+  text-decoration: none;
+  display: block;
 }
 
 @media (hover: hover) {
