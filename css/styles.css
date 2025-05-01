@@ -339,6 +339,14 @@ button:hover {
     touch-action: manipulation;
 }
 
+a.start-button {
+    text-decoration: none;
+    display: block;
+    background: none;
+    border: none;
+    color: #000000;
+}
+
 @media (hover: hover) {
     .start-button:hover {
         transform: scale(1.1);

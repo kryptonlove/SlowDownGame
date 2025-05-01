@@ -46,11 +46,3 @@ function shareOnTwitter() {
     a.rel = 'noopener noreferrer';
     a.click();
   }
-  
-  function openMoreGames() {
-    const a = document.createElement('a');
-    a.href = 'https://www.diggle.fun/';
-    a.target = '_blank';
-    a.rel = 'noopener noreferrer';
-    a.click();
-  }
